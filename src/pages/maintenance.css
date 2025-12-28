@@ -1,0 +1,95 @@
+.maintenance-root {
+  max-width: 900px;
+}
+
+/* Header */
+.maintenance-header {
+  margin-bottom: 64px;
+}
+
+.maintenance-header h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.maintenance-header p {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+/* Panel */
+.maintenance-panel {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 48px;
+  background: var(--card);
+}
+
+/* Message */
+.maintenance-message {
+  margin-bottom: 32px;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  background: color-mix(in oklch, var(--primary) 12%, transparent);
+  color: var(--foreground);
+}
+
+/* Form */
+.maintenance-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.field input {
+  height: 44px;
+  padding: 0 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--input);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--ring);
+}
+
+/* Button */
+.primary-btn {
+  grid-column: span 2;
+  height: 46px;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.primary-btn:hover {
+  opacity: 0.92;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

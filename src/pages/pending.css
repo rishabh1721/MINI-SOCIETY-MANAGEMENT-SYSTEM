@@ -1,0 +1,42 @@
+.pending-root {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.pending-card {
+  max-width: 420px;
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.pending-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.pending-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--foreground);
+}
+
+.pending-sub {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .pending-card {
+    padding: 28px 20px;
+  }
+}

@@ -1,0 +1,89 @@
+.approve-root {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.approve-header {
+  margin-bottom: 32px;
+}
+
+.approve-header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.approve-header p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+
+.approve-loading,
+.approve-empty {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted-foreground);
+}
+
+.approve-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.approve-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.approve-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.approve-info strong {
+  font-size: 1rem;
+}
+
+.approve-info span {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+.approve-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.approve-actions select {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.assigning {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .approve-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .approve-actions {
+    justify-content: space-between;
+  }
+}

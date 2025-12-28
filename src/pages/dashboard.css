@@ -1,0 +1,142 @@
+
+
+.dashboard-root {
+  max-width: 1200px;
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 56px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* Cards */
+.stat-card {
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-card .label {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+
+.stat-card .value {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Emphasis */
+.stat-card.highlight {
+  background: color-mix(in oklch, var(--primary) 6%, var(--card));
+  border-color: color-mix(in oklch, var(--primary) 20%, var(--border));
+}
+
+
+.dashboard-root {
+  max-width: 1200px;
+}
+
+/* Header */
+.dashboard-header {
+  margin-bottom: 48px;
+}
+
+.dashboard-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+}
+
+/* Grid — AUTO-FIT FIX (CRITICAL) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Cards */
+.stat-card {
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0; /* prevents overflow */
+}
+
+/* Label */
+.stat-card .label {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Value — RESPONSIVE CLAMP (KEY FIX) */
+.stat-card .value {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  word-break: break-word;
+  line-height: 1.1;
+}
+
+/* Highlight */
+.stat-card.highlight {
+  background: color-mix(in oklch, var(--primary) 6%, var(--card));
+  border-color: color-mix(in oklch, var(--primary) 20%, var(--border));
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .stat-card {
+    padding: 24px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .dashboard-header {
+    margin-bottom: 32px;
+  }
+
+  .stat-card {
+    padding: 22px;
+  }
+}
+

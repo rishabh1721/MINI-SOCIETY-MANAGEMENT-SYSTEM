@@ -1,0 +1,148 @@
+/* Root */
+.app-root {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  border-right: 1px solid var(--border);
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+}
+
+/* Brand */
+.sidebar-top {
+  margin-bottom: 48px;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.brand-sub {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-item {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background: color-mix(in oklch, var(--muted) 40%, transparent);
+  color: var(--foreground);
+}
+
+.nav-item.active {
+  background: color-mix(in oklch, var(--primary) 14%, transparent);
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+/* Footer */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.logout {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: var(--destructive);
+}
+
+/* Main content */
+.app-content {
+  flex: 1;
+  padding: 64px;
+  overflow-y: auto;
+}
+
+
+/* ---------- Responsive ---------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .app-content {
+    padding: 40px;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app-root {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 50;
+    background: var(--background);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .app-content {
+    padding: 24px;
+  }
+
+  .mobile-menu {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+    background: none;
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: var(--foreground);
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 40;
+  }
+}
+
+/* Hide mobile menu on desktop */
+.mobile-menu {
+  display: none;
+}
+
