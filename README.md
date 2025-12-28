@@ -1,16 +1,127 @@
-# React + Vite
+# MINI SOCIETY MANAGEMENT SYSTEM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+**Mini Society Management System** is a compact web application demonstrating basic society data handling with role-based access.  
+Built as a **learning and demo project**, it shows how to manage flats, residents, and simple maintenance workflows through a clean React + Firebase setup.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Why This Project?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repository is a **small, focused project** to practice:
+- React frontend development
+- Firebase Authentication
+- Firestore realtime database
+- Role-based access control for admin vs user
+- Basic CRUD operations
 
-## Expanding the ESLint configuration
+It is not a full enterprise solution but an educational example of full-stack integration.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Features
+
+- 🔐 **User Authentication** (Firebase Email/Password)
+- 👤 **Admin Dashboard**
+  - Manage residents
+  - Approve registrations
+- 🏠 **Resident Dashboard**
+  - View profile & flat details
+- 📊 **Firestore data management**
+- 🚦 Role-based redirects and protected routes
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React |
+| Auth & Backend | Firebase Authentication |
+| Database | Firestore (Firebase) |
+| Hosting | Firebase Hosting |
+
+---
+
+## 📝 Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/rishabh1721/MINI-SOCIETY-MANAGEMENT-SYSTEM.git
+cd MINI-SOCIETY-MANAGEMENT-SYSTEM
+````
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Set up Firebase:
+
+1. Create Firebase project
+2. Enable Email/Password Authentication
+3. Create Firestore database
+4. Replace `.env` config values with your Firebase settings
+
+Run locally:
+
+```bash
+npm start
+```
+
+---
+
+## 🧑‍💻 Usage
+
+**Admin**
+
+* Register and log in
+* Approve or reject resident registrations
+* View all resident data
+
+**Resident**
+
+* Sign up
+* Access profile after approval
+* View flat and payment info
+
+---
+
+## 🖼️ Screenshots
+
+*(Optional: Add relevant screenshots here to show UI pages.)*
+
+---
+
+## 🧭 Project Structure
+
+```
+/src
+├─ components/
+├─ pages/
+├─ firebaseConfig.js
+├─ App.js
+└─ index.js
+```
+
+---
+
+## 👥 Contributing
+
+Contributions are welcome.
+Fork the repo → Create a branch → Add feature → Submit a pull request.
+
+---
+
+## 📜 License
+
+This project is available under the MIT License. (Add LICENSE file if needed)
+
+---
+
+## 📌 About
+
+A **small experimental project** to demonstrate society management basics using modern frontend and Firebase backend workflows.
+
